@@ -19,6 +19,7 @@
   --destaque: #127369;
   --destaque-inverso: #8AA6A3;
   --fundo-card: #BFBFBF;
+  --branco: white;
 }
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -55,4 +56,61 @@ nav#menu ul {
 #menu a:hover {
   background-color: var(--destaque-inverso);
   color: var(--destaque);
+}
+
+main {
+  display: grid;
+  grid-template-columns: auto 90vw auto;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+section#ficha {
+  background-color: var(--fundo-card);
+  padding: 20px;
+  border-radius: 5px;
+  grid-column: 2;
+}
+
+section#ficha img.foto {
+  width: 200px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 3px solid var(--destaque-inverso);
+  box-shadow: 0 0 7px var(--branco),  
+              0 0 15px var(--destaque), 
+              0 0 20px var(--destaque),  
+              0 0 25px var(--destaque);
+  display: block;
+  margin: auto;
+  margin-bottom: 10px;
+  
+}
+
+section#ficha h1 {
+  color: var(--destaque);
+  margin: 15px 0;
+  font-size: 1.5em;
+  text-align: left;
+}
+
+#social {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  font-size: 2em;
+  gap: 10px;
+  margin-top: 10px;
+  
+}
+
+#social a {
+  color: var(--destaque);
+  transition: color 0.5em;
+}
+
+#social a:hover {
+  color: var(--destaque-inverso);
 }
