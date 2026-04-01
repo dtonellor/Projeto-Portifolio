@@ -37,6 +37,7 @@ header {
   align-content: center;
   position: sticky;
   top: 0;
+  z-index: 2;
 }
 
 nav#menu ul {
@@ -72,6 +73,7 @@ section#ficha {
   padding: 20px;
   border-radius: 5px;
   grid-column: 2;
+  
 }
 
 section#ficha img.foto {
@@ -242,12 +244,28 @@ footer {
   background-color: var(--destaque);
   color: var(--texto-inverso);
   text-align: center;
-  padding: 15px;
+  padding: 8px;
 }
 
 @media screen and (min-width: 768px) {
   #skills-container {
     grid-template-columns: 1fr 1fr;
+  }
+
+  main {
+    grid-template-columns: auto 300px 1fr auto;
+  }
+
+  section#ficha {
+    grid-column: 2 / 3;
+    height: fit-content;
+    position: sticky;
+    top: 65px;
+    
+  }
+
+  section#detalhes {
+    grid-column: 3 / 4;
   }
 
   #projeto-container .projeto {
