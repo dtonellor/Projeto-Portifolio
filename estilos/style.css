@@ -21,11 +21,23 @@
   --fundo-card: #BFBFBF;
   --branco: white;
 }
+
+body.escuro {
+  --fundo-principal: #262525;
+  --texto: #25867d;
+  --texto-inverso: #494949;
+  --destaque: #1d9d90;
+  --destaque-inverso: #94b5b1;
+  --fundo-card: #424242;
+  --branco: rgb(0, 0, 0);
+}
+
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   line-height: 1.5em;
   background-color: var(--fundo-principal);
   color: var(--texto);
+  transition: background-color 0.5s, color 0.5s;
 }
 
 header {
@@ -182,7 +194,7 @@ article h2 {
   border-radius: 8px;
   border-left: 5px solid var(--destaque-inverso);
   padding-left: 10px;
-  transition: borde-width 1s, border-color 1s;
+  transition: border-width 0.5s, border-color 0.5s;
 }
 
 #formacao-container .curso:hover {
